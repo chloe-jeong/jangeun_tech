@@ -11,20 +11,18 @@ RequestExecutionLevel admin
 
 !define MUI_ABORTWARNING
 
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_LICENSE "license.txt"
 !insertmacro MUI_PAGE_COMPONENTS
-!insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
 
-!insertmacro MUI_UNPAGE_CONFIRM
-!insertmacro MUI_UNPAGE_INSTFILES
-  
 !insertmacro MUI_LANGUAGE "English"
 
-Section -pre
+Section "Uninstall third-party programs" UnINST
 	SetOverwrite on
 
-	ReadRegStr ${TouchCenter} HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\TouchCenter" "UninstallString"
-	nsExec::Exec "${TouchCenter}"
+	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\LingShangTouch TouchCenter" "UninstallString"
+	ExecWait '"$0"'
 SectionEnd
 
