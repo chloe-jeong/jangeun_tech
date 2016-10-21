@@ -11,6 +11,11 @@ RequestExecutionLevel admin
 
 !define MUI_ABORTWARNING
 
+!define MUI_ICON "jangeun_tech_logo.ico"
+!define MUI_HEADERIMAGE
+!define MUI_HEADERIMAGE_BITMAP "jangeun_tech_logo.bmp"
+!define MUI_HEADERIMAGE_RIGHT
+
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "license.txt"
 !insertmacro MUI_PAGE_COMPONENTS
