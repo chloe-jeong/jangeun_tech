@@ -4,7 +4,7 @@
 !define PRODUCT_NAME	"Jangeun Tech Uninstaller"
 
 Name "Jangeun Tech Uninstaller"
-OutFile "jangeun_tech_uninstaller-${PACKAGE_VERSION}-setup.exe"
+OutFile "output\jangeun_tech_uninstaller-${PACKAGE_VERSION}-setup.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 InstallDirRegKey HKCU "Software\${PRODICT_NAME}" ""
 RequestExecutionLevel admin
