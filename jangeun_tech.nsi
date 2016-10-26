@@ -14,7 +14,6 @@ RequestExecutionLevel admin
 !define MUI_ICON "jangeun_tech_logo.ico"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_BITMAP "jangeun_tech_logo.bmp"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "jangeun_tech_logo.bmp"
 !define MUI_HEADERIMAGE_RIGHT
 
 !insertmacro MUI_PAGE_WELCOME
