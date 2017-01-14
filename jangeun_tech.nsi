@@ -27,17 +27,10 @@ RequestExecutionLevel admin
 Section "Uninstall third-party programs" UnINST
 	SetOverwrite on
 
-	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\LingShangTouch TouchCenter" "UninstallString"
-	ExecWait "$0"
-
 	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Wacom Tablet Driver" "UninstallString"
 	ExecWait "$0"
 
 	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Wacom WebTabletPlugin for Internet Explorer and Netscape" "UninstallString"
-	ExecWait "$0"
-
-	nsExec::Exec 'TASKKILL /F /IM TouchPanel.exe'
-	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Morgan\TouchPanel" "UninstallString"
 	ExecWait "$0"
 SectionEnd
 
