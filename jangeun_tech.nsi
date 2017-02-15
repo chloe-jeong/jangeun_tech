@@ -1,6 +1,6 @@
 !include "MUI2.nsh"
 
-!define PACKAGE_VERSION	"1.0.0"
+!define PACKAGE_VERSION	"1.0.1"
 !define PRODUCT_NAME	"Jangeun Tech Uninstaller"
 
 SetCompressor	lzma
