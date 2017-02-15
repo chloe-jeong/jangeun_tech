@@ -3,11 +3,12 @@
 !define PACKAGE_VERSION	"1.0.0"
 !define PRODUCT_NAME	"Jangeun Tech Uninstaller"
 
+SetCompressor lzma
+
 Name "Jangeun Tech Uninstaller"
 OutFile "output\jangeun_tech_uninstaller-${PACKAGE_VERSION}-setup.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 InstallDirRegKey HKCU "Software\${PRODICT_NAME}" ""
-RequestExecutionLevel admin
 
 !define MUI_ABORTWARNING
 
