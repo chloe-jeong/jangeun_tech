@@ -3,7 +3,7 @@
 !define PACKAGE_VERSION	"1.0.0"
 !define PRODUCT_NAME	"Jangeun Tech Uninstaller"
 
-SetCompressor lzma
+SetCompressor	lzma
 
 Name "Jangeun Tech Uninstaller"
 OutFile "output\jangeun_tech_uninstaller-${PACKAGE_VERSION}-setup.exe"
@@ -25,7 +25,18 @@ InstallDirRegKey HKCU "Software\${PRODICT_NAME}" ""
 
 !insertmacro MUI_LANGUAGE "English"
 
-Section "Uninstall third-party programs" UnINST
+Section "Uninstall programs for 32 bits" UnINST
+	SetOverwrite on
+
+	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Wacom Tablet Driver" "UninstallString"
+	ExecWait "$0"
+
+	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Wacom WebTabletPlugin for Internet Explorer and Netscape" "UninstallString"
+	ExecWait "$0"
+SectionEnd
+
+Section "Uninstall programs for 64 bits" UnINST64
+	SetRegView 64
 	SetOverwrite on
 
 	ReadRegStr $0 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Wacom Tablet Driver" "UninstallString"
