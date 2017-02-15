@@ -3,7 +3,8 @@
 !define PACKAGE_VERSION	"1.0.1"
 !define PRODUCT_NAME	"Jangeun Tech Uninstaller"
 
-SetCompressor	lzma
+SetCompressor lzma
+RequestExecutionLevel admin
 
 Name "Jangeun Tech Uninstaller"
 OutFile "output\jangeun_tech_uninstaller-${PACKAGE_VERSION}-setup.exe"
